@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay</title>
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Inter:wght@400;500;600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 h-screen">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <div class="flex flex-col flex-1 relative overflow-x-hidden overflow-y-auto">
+            <header class="sticky top-0 z-30 border-b border-slate-200 bg-white">
+                <div class="px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between items-center h-16 -mb-px">
+                        <a class="block" href="index.html">
+                            <svg width="32" height="32" viewBox="0 0 32 32">
+                                <defs>
+                                    <linearGradient x1="28.538%" y1="20.229%" x2="100%" y2="108.156%" id="logo-a">
+                                        <stop stop-color="#A5B4FC" stop-opacity="0" offset="0%"></stop>
+                                        <stop stop-color="#A5B4FC" offset="100%"></stop>
+                                    </linearGradient>
+                                    <linearGradient x1="88.638%" y1="29.267%" x2="22.42%" y2="100%" id="logo-b">
+                                        <stop stop-color="#38BDF8" stop-opacity="0" offset="0%"></stop>
+                                        <stop stop-color="#38BDF8" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <rect fill="#6366F1" width="32" height="32" rx="16"></rect>
+                                <path d="M18.277.16C26.035 1.267 32 7.938 32 16c0 8.837-7.163 16-16 16a15.937 15.937 0 01-10.426-3.863L18.277.161z" fill="#4F46E5"></path>
+                                <path d="M7.404 2.503l18.339 26.19A15.93 15.93 0 0116 32C7.163 32 0 24.837 0 16 0 10.327 2.952 5.344 7.404 2.503z" fill="url(#logo-a)"></path>
+                                <path d="M2.223 24.14L29.777 7.86A15.926 15.926 0 0132 16c0 8.837-7.163 16-16 16-5.864 0-10.991-3.154-13.777-7.86z" fill="url(#logo-b)"></path>
+                            </svg>
+                        </a>
+                        <a class="block rounded-full bg-slate-100 text-slate-500 hover:text-slate-600" href="cart.html">
+                            <svg width="32" height="32" viewBox="0 0 32 32">
+                                <path class="fill-path" d="M15.95 14.536l4.242-4.243a1 1 0 111.415 1.414l-4.243 4.243 4.243 4.242a1 1 0 11-1.415 1.415l-4.242-4.243-4.243 4.243a1 1 0 01-1.414-1.415l4.243-4.242-4.243-4.243a1 1 0 011.414-1.414l4.243 4.243z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="relative pt-8">
+                    <div class="absolute top-0 left-0 right-0 bottom-0 overflow-hidden bg-slate-800">
+                        <img class="w-full h-full object-cover opacity-10 blur" src="../img/pay-bg.jpg" width="460" height="180" alt="Pay background">
+                    </div>
+                    <div class="relative mx-auto max-w-lg px-4 lg:px-8 sm:px-6">
+                        <img class="shadow-lg rounded-t" src="../img/pay-bg.jpg" width="460" height="180" alt="Pay background">
+                    </div>
+                </div>
+                <div class="relative mx-auto max-w-lg px-4 pb-8 lg:px-8 sm:px-6">
+                    <div class="bg-white shadow-lg px-8 pb-6 rounded-b">
+                        <div class="text-center mb-6">
+                            <div class="mb-2">
+                                <img class="-mt-8 inline-flex rounded-full" src="../img/user-28-01.jpg" width="64" height="64" alt="User">
+                            </div>
+                            <h1 class="text-xl leading-snug text-slate-800 font-semibold mb-2">Front-End Learning 🔥</h1>
+                            <div class="text-sm">
+                                Learn how to create real web apps using HTML &amp; CSS. Code templates included.
+                            </div>
+                        </div>
+                        <div class="flex justify-center mb-6">
+                            <div class="relative flex w-full p-1 bg-slate-50 rounded">
+                                <span class="pay-by absolute left-0 top-0 right-0 bottom-0 m-1 pointer-events-none">
+                                    <span class="absolute left-0 top-0 right-0 bottom-0 shadow-sm bg-white rounded border border-slate-200 w-1/2 transition translate-x-0"></span>
+                                </span>
+                                <button class="card relative p-1 flex-1 font-medium text-sm transition">Pay With Card</button>
+                                <button class="paypal relative p-1 flex-1 font-medium text-sm transition">Pay With PayPal</button>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-1" for="card-nr">Card Number <span class="text-rose-500">*</span></label>
+                                    <input id="card-nr" class="w-full" type="text" placeholder="1234 1234 1234 1234">
+                                </div>
+                                <div class="space-x-4 flex">
+                                    <div class="flex-1">
+                                        <label class="block text-sm font-medium mb-1" for="card-expiry">Expiry Date <span class="text-rose-500">*</span></label>
+                                        <input id="card-expiry" class="w-full" type="text" placeholder="MM/YY">
+                                    </div>
+                                    <div class="flex-1">
+                                        <label class="block text-sm font-medium mb-1" for="card-cvc">CVC <span class="text-rose-500">*</span></label>
+                                        <input id="card-cvc" class="w-full" type="text" placeholder="CVC">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1" for="card-name">Name on Card <span class="text-rose-500">*</span></label>
+                                    <input id="card-name" class="w-full" type="text" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-1" for="card-email">Email <span class="text-rose-500">*</span></label>
+                                    <input id="card-email" class="w-full" type="email" placeholder="john@company.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <div class="mb-4">
+                                <button class="btn pay-now w-full bg-indigo-500 text-white hover:bg-indigo-600">Pay $253.00</button>
+                            </div>
+                            <div class="text-xs text-slate-500 italic text-center">You'll be charged $253, including $48 for VAT in Italy</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
